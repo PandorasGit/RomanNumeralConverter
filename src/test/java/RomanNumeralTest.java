@@ -46,4 +46,25 @@ public class RomanNumeralTest {
         Assertions.assertEquals(999,addedValues);
     }
 
+    @Test
+    public void testOnePlusOnePlusOne(){
+        RomanNumeral romanNumeral = new RomanNumeral("I");
+        RomanNumeral nextNumeral = new RomanNumeral("I");
+        romanNumeral.nextNumeral = nextNumeral;
+        nextNumeral.nextNumeral = new RomanNumeral("I");
+        int addedValues = romanNumeral.calculateVale();
+        Assertions.assertEquals(3,addedValues);
+    }
+
+    @Test
+    public void testCaluclateValueOfMID(){
+
+        RomanNumeral romanNumeral = new RomanNumeral("M");
+        RomanNumeral nextNumeral = new RomanNumeral("I");
+        romanNumeral.nextNumeral = nextNumeral;
+        nextNumeral.nextNumeral = new RomanNumeral("D");
+        int addedValues = romanNumeral.calculateVale();
+        Assertions.assertEquals(1499,addedValues);
+    }
+
 }

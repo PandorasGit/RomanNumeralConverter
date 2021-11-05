@@ -12,23 +12,29 @@ public class RomanNumeral {
 
 
     public int calculateVale() {
+
         if(nextNumeral==null){
             return numeralInt;
         }
-        if(nextNumeral.numeralInt<=numeralInt){
-            return numeralInt + nextNumeral.convertInt();
+        if(numeralInt >= nextNumeral.numeralInt){
+            return add();
         }
         else{
-            return subTract();
+            return subtract();
         }
 
     }
 
-    private int subTract(){
+    private int add(){
+        return numeralInt + nextNumeral.calculateVale();
+    }
+
+    private int subtract(){
         return (numeralInt - nextNumeral.numeralInt + (nextNumeral.calculateVale() - nextNumeral.numeralInt))*-1;
     }
 
     private int convertInt() {
+
         return switch (numeralString) {
             case "I" -> 1;
             case "V" -> 5;
