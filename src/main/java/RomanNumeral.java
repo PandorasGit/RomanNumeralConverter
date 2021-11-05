@@ -1,8 +1,7 @@
-import java.util.Locale;
 
 public class RomanNumeral {
 
-    private String numeralString;
+    private final String numeralString;
     public int numeralInt;
     public RomanNumeral nextNumeral=null;
 
@@ -19,7 +18,14 @@ public class RomanNumeral {
         if(nextNumeral.numeralInt<=numeralInt){
             return numeralInt + nextNumeral.convertInt();
         }
-        return 11;
+        else{
+            return subTract();
+        }
+
+    }
+
+    private int subTract(){
+        return (numeralInt - nextNumeral.numeralInt + (nextNumeral.calculateVale() - nextNumeral.numeralInt))*-1;
     }
 
     private int convertInt() {

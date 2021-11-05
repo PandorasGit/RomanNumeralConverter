@@ -3,7 +3,7 @@ Roman Numeral Converter
 This project is intended to calculate the value of roman numerals.
 
 ## General info
-This is the v0.0.2 release.
+This is the v0.0.4 release.
 
 ## Authors
 Wendall R

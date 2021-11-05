@@ -37,4 +37,13 @@ public class RomanNumeralTest {
         Assertions.assertEquals(1001,addedValues);
     }
 
+    @Test
+    public void testThousandMinusOne(){
+
+        RomanNumeral romanNumeral = new RomanNumeral("I");
+        romanNumeral.nextNumeral = new RomanNumeral("M");
+        int addedValues = romanNumeral.calculateVale();
+        Assertions.assertEquals(999,addedValues);
+    }
+
 }
