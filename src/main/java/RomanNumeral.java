@@ -14,9 +14,11 @@ public class RomanNumeral {
 
     public int calculateVale() {
         if(nextNumeral==null){
-            return 0;
+            return numeralInt;
         }
-
+        if(nextNumeral.numeralInt<=numeralInt){
+            return numeralInt + nextNumeral.convertInt();
+        }
         return 11;
     }
 

@@ -8,7 +8,7 @@ public class RomanNumeralTest {
 
         RomanNumeral romanNumeral = new RomanNumeral("I");
         int calcValue = romanNumeral.calculateVale();
-        Assertions.assertEquals(0,calcValue);
+        Assertions.assertEquals(1,calcValue);
     }
 
     @Test
@@ -17,6 +17,24 @@ public class RomanNumeralTest {
         RomanNumeral romanNumeral = new RomanNumeral("I");
         int stringValue = romanNumeral.numeralInt;
         Assertions.assertEquals(1,stringValue);
+    }
+
+    @Test
+    public void testOnePlusOne(){
+
+        RomanNumeral romanNumeral = new RomanNumeral("I");
+        romanNumeral.nextNumeral = new RomanNumeral("I");
+        int addedValues = romanNumeral.calculateVale();
+        Assertions.assertEquals(2,addedValues);
+    }
+
+    @Test
+    public void testOnePlusOneThousand(){
+
+        RomanNumeral romanNumeral = new RomanNumeral("M");
+        romanNumeral.nextNumeral = new RomanNumeral("I");
+        int addedValues = romanNumeral.calculateVale();
+        Assertions.assertEquals(1001,addedValues);
     }
 
 }
