@@ -4,10 +4,19 @@ import org.junit.jupiter.api.Test;
 public class RomanNumeralTest {
 
     @Test
-    public void testIfNextNumeralIsNull(){
-        RomanNumeral romanNumeral = new RomanNumeral("i");
-        RomanNumeral nextNumeral = romanNumeral.next();
-        Assertions.assertNull(nextNumeral);
+    public void testCalculateValueFunctionBestCase(){
 
+        RomanNumeral romanNumeral = new RomanNumeral("I");
+        int calcValue = romanNumeral.calculateVale();
+        Assertions.assertEquals(0,calcValue);
     }
+
+    @Test
+    public void testConvertNumeralStringIntoInt(){
+
+        RomanNumeral romanNumeral = new RomanNumeral("I");
+        int stringValue = romanNumeral.numeralInt;
+        Assertions.assertEquals(1,stringValue);
+    }
+
 }
