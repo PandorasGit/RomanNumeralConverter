@@ -3,7 +3,7 @@ Roman Numeral Converter
 This project is intended to calculate the value of roman numerals.
 
 ## General info
-This is the v0.0.4 release.
+This is the v0.0.5 release.
 
 ## Authors
 Wendall R
@@ -15,6 +15,7 @@ Wendall R
 
 ## Technologies
 Project is created with:
+* Data structure style programing
 * Java: 16.0.0
 * junit-jupiter: 5.8.0
 * junit-jupiter-params: 5.8.0
