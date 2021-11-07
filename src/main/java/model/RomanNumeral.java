@@ -19,12 +19,13 @@ public class RomanNumeral {
         if(nextNumeral==null){
             return numeralInt;
         }
-        if(numeralInt >= nextNumeral.numeralInt){
+        else if(numeralInt >= nextNumeral.numeralInt){
             return add();
         }
-        else{
+        else {
             return subtract();
         }
+
 
     }
 
@@ -33,7 +34,7 @@ public class RomanNumeral {
     }
 
     private int subtract(){
-        return (numeralInt - nextNumeral.numeralInt + (nextNumeral.calculateVale() - nextNumeral.numeralInt))*-1;
+        return nextNumeral.numeralInt-numeralInt+(nextNumeral.calculateVale()-nextNumeral.numeralInt);
     }
 
     private int convertInt() {

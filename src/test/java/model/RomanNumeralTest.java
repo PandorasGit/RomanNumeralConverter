@@ -69,4 +69,13 @@ public class RomanNumeralTest {
         Assertions.assertEquals(1499,addedValues);
     }
 
+    @Test
+    public void testCreateNumberFromMMC(){
+        RomanNumeral romanNumeral = new RomanNumeral("M");
+        RomanNumeral nextNumeral = new RomanNumeral("M");
+        romanNumeral.nextNumeral = nextNumeral;
+        nextNumeral.nextNumeral = new RomanNumeral("C");
+        Assertions.assertEquals(2100,romanNumeral.calculateVale());
+    }
+
 }

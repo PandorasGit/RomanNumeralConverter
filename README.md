@@ -3,7 +3,7 @@ Roman Numeral Converter
 This project is intended to calculate the value of roman numerals.
 
 ## General info
-This is the v0.0.9 release.
+This is the v0.1.0 release.
 
 ## Authors
 Wendall R
@@ -26,6 +26,6 @@ Project is created with:
 
 ## Setup
 To run this project, clone this repository, and download the dependencies and plugins listed in build.gradle.
-
+Run from main, or take and use the two classes as needed.
 ## Known Errors
 

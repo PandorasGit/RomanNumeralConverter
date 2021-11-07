@@ -19,13 +19,13 @@ public class RomanNumeralBuilder {
     }
 
     private void recursiveRomanNumeralBuilder(RomanNumeral romanNumeral,int index){
-        System.out.println(romanNumeral.numeralInt);
         if(index<numeralStringArray.length){
 
             String numeralString = String.valueOf(numeralStringArray[index]);
             RomanNumeral nextNumeral = new RomanNumeral(numeralString);
             romanNumeral.nextNumeral = nextNumeral;
             recursiveRomanNumeralBuilder(nextNumeral,index+1);
+
         }
     }
 }
