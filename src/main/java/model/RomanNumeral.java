@@ -1,3 +1,6 @@
+package model;
+
+import java.util.Locale;
 
 public class RomanNumeral {
 
@@ -6,7 +9,7 @@ public class RomanNumeral {
     public RomanNumeral nextNumeral=null;
 
     public RomanNumeral(String numeralString) {
-        this.numeralString = numeralString;
+        this.numeralString = numeralString.toUpperCase(Locale.ROOT);
         this.numeralInt=convertInt();
     }
 
